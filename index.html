@@ -8,6 +8,7 @@
 </head>
 <body>
 <h1>UNIT 5 NOTES</h1>
+<a href="cssNotes.html">CSS Notes Page</a>
 <hr>
 <br>
 <h1>Headers</h1>
@@ -28,7 +29,7 @@
 <p>A <b>block element</b> moves the content to a new line. The paragraph and headers elements are block elements. An <b>inline element</b> keeps its content on the same line as the content before it and after it. It does NOT create a new line. The bold, italics and underline elements are inline elements.</p>
 
 <h3><u>Block Example</u></h3>
-<p>This is a paragraph.</p><p>This is another paragraph. It makes a new block.</p><p>This is an example of a nested block element. <p>This is a nested block.</p></p>
+<p>This is a paragraph.</p><p>This is another paragraph. It makes a new block.</p><p>This is an example of a nested block element. This is a nested block.</p>
 
 <h3><u>Inline Elements Examples</u></h3>
 <p>This is a paragraph with <b>an inline element</b>. Notice how the inline element does not move to a new line.</p>
@@ -42,6 +43,80 @@
 <p>Below this paragraph is a horizontal rule.</p>
 <hr>
 
+<h1 style="color: #f05454">Attributes</h1>
+<p><b>Attributes</b> are properties which can change an HTML element. Attributes are written in the opening tag of ANY html element. The most common attributes are <i>src</i>, <i>href</i>, <i>class</i>, <i>id</i> and <i>style</i>.</p>
+
+<h2>Inline CSS Styles</h2>
+<p>The <i>style</i> attribute allows you to add CSS style to any HTML element.</p>
+
+<p style="color: red">This paragraph has inline CSS style which changes the font color to red.</p>
+
+<p style="background-color: steelblue">This paragraph has inline CSS style which changes the background color.</p>
+
+<p style="color: lightsteelblue; background-color: slategrey">This paragraph has inline CSS style which changes the font color <b>AND</b> the background color.</p>
+
+<p style="font-family: Jokerman">This paragraph has a different font type.</p>
+
+<p style="font-size: 48px">This paragraph has a larger font size.</p>
+
+<p style="background-color: #222831; color: #dddddd; font-family: 'Edwardian Script ITC'; font-size: 72px">This paragraph has all 4 inline styles.</p>
+
+<h1> style="color: #f4d160">Images</h1>
+
+<p>An <b>image element</b> is a <i>block</i> element which inserts pictures into the document. An image element is a self-closing element, which means it does not have an end tag. It has one attribute, <i>src</i>, which is a filepath that points to the image's locationn. Those filepaths can be either <b>absolute</b> or <b>relative</b>.</p>
+
+<h2>Simple Image Example</h2>
+<img src="https://curiocity.com/calgary/wp-content/uploads/2019/11/thor3.jpg">
+
+<h2>Image Attributes</h2>
+<p>There are 4 attributes commonly used for images. <i>Width</i> and <i>height</i> are used to resize the images. <i>Alt</i> allows to use text-description of images for accessibility and broken images. <i>Title</i> allows a hover-over text to appear.</p>
+
+<h3>Width and Height</h3>
+<p>The width and height can be measured in many different ways, but the more common ones are pixels and percentages. Using pixels, you set the specific precise size based on pixels. Using percentages, you set the dimensions based ona percentage of the entire page. Percentage based resizing will often respect aspect ratios while using pixels may not.</p>
+
+<img src="https://curiocity.com/calgary/wp-content/uploads/2019/11/thor3.jpg" title="Set width and height using pixels" width="150 px" height="150 px">
+
+<img src="https://curiocity.com/calgary/wp-content/uploads/2019/11/thor3.jpg" title="Set width using pixels and maintaining aspect ratio" width="150px">
+
+<img src="https://curiocity.com/calgary/wp-content/uploads/2019/11/thor3.jpg" title="Set width using percentages" width="50%">
+
+<h3>Alt Attribute</h3>
+<p><u>Every</u> picture should at <u>least</u> have the alt attribute. The alt attribute helps with screen readers for visually impaired users and in the cases that the image is broken.</p>
+
+<img src="https://curiocity.com/calgary/wp-content/uploads/2019/11/thor3.jpg" title="broen link without alt" width="50%">
+<img src="https://curiocity.com/calgary/wp-content/uploads/2019/11/thor3.jpg" title="broken line with alt" width="50%" alt="picture of Mount Thor, a mountain which has the title of the tallest vertical drop in the world">
+
+<h2>Relative vs. Absolute</h2>
+<p>A <b>absolute</b> filepath includes all the navigate to get to the server, folders, and files. The examples above are all absolute filepaths. An absolute filepath is used whe the image is stored on a different server or device than the HTML document.</p>
+
+    <p>A <b>relative</b> filepath only include the folder and file. The examples below are all relative filepaths. A relative filepath is used when the images are stored alongside the HTML document.</p>
+
+    <img src="deer.jpg" width="50%" alt="deer silhouette at sunset">
+
+    <hr>
+
+    <h1>Links</h1>
+    <p>The <b>anchor element</b> is an <i>inline element</i> and is way to include hypertext links, otherwise known as just links, in your document. An anchor is a reference point for other documents or files. It commonly has 3 attributes: <i>href</i>, <i>target</i>, and <i>download</i>.</p>
+
+    <h2>Simple Links</h2>
+    <a href="http://www.webhamster.com/">LINK</a>
+    <p>In order for a link to work is <b>MUST</b> include the <i>href</i> attribute. This attribute is the filepath, either absolute or relative, to the document, website or file you wish to link.</p>
+
+    <h2>Links Attributes</h2>
+    <p>The <i>target</i> attribute allows you to decide where the link opens. Ther are 4 options, but only one is commonly used. <i>_blank</i> opens the linked document in a new window or tab. <i>_self</i> opens the link in the current window or tab. This is the default behavior. The two others are only used if you have a frame or other window INSIDE a window. We will not be discussing these.</p>
+
+    <a href="https://www.webhamster.com/" target="_blank">This link will open in a new tab.</a>
+
+    <p>The <i>download</i> attribute allows you to download the file or document linked. This is commonly used only with relative filepaths.</p>
+
+    <a href="deer.jpg" donwload="deerPic">This link will download a deer picture.</a>
+
+    <h2>A Picture as a Link</h2>
+    <p>Since a link has an opening AND closing tag, we can place ANY HTML ELEMENT as its content, which includes pictures. We simply nest the img element inside the anchor element.</p>
+
+    <a href="https://www.webhamster.com/" target="_blank">
+
+    </a>
 <br><hr>
 </body>
 </html>
